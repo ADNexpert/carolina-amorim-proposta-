@@ -4,101 +4,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projeto de Reorganização Familiar — Carolina Amorim</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#14302A;--ink-2:#1D4038;--gold:#C9A227;--gold-soft:#E3C86B;--paper:#F6F1E6;--paper-2:#EFE7D5;--text:#26332F;--muted:#6E7A74;--line:rgba(20,48,42,.16)}
+:root{
+--bar:#0D0B07;--forest:#17281F;--forest-2:#1C2F25;--abyss:#111D16;
+--noir:#181109;--gold:#C6A04C;--champagne:#E6CFA0;
+--cream:#F4F0E4;--card:#FAF7ED;--olive:#2E2B1F;
+--text:#333026;--muted:#7C776A;--line:rgba(51,48,38,.14)
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Georgia,serif;background:var(--paper);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
-.eyebrow{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
-section{padding:92px 24px}
-.wrap{max-width:920px;margin:0 auto}
-h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.5rem);color:var(--ink);line-height:1.16;margin:14px 0 20px}
-.section-intro{font-size:1.06rem;max-width:38em}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--text);line-height:1.65;font-size:.93rem;-webkit-font-smoothing:antialiased}
+.eyebrow{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.22;margin:14px 0 18px;color:#2A2B22}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
-.btn{display:inline-block;font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;text-decoration:none;background:var(--gold);color:var(--ink);padding:16px 38px;border-radius:100px;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(201,162,39,.4)}
-.hero{background:radial-gradient(1100px 560px at 80% -8%,rgba(201,162,39,.16),transparent 60%),linear-gradient(165deg,var(--ink),var(--ink-2));color:var(--paper);padding:130px 24px 110px;position:relative;overflow:hidden}
-.hero .eyebrow{color:var(--gold-soft)}
-.hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.2rem,5.6vw,4.3rem);line-height:1.1;margin:22px 0 26px}
-.hero h1 em{font-style:italic;font-weight:600;color:var(--gold-soft)}
-.hero p{font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:33em;color:rgba(246,241,230,.85);margin-bottom:40px}
-.hero .meta{display:flex;gap:34px;flex-wrap:wrap;margin-top:52px;padding-top:26px;border-top:1px solid rgba(246,241,230,.18)}
-.hero .meta strong{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--gold-soft);line-height:1.1}
-.hero .meta span{font-family:'Inter',sans-serif;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,241,230,.65)}
-.river{position:absolute;inset:0;pointer-events:none;opacity:.4}
-.river path{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-dasharray:2200;stroke-dashoffset:2200;animation:flow 3s ease-out .3s forwards}
-@keyframes flow{to{stroke-dashoffset:0}}
-.who{background:var(--paper)}
-.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
-.wcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 30px;font-size:1rem}
-.wcard::before{content:"→";color:var(--gold);font-family:'Inter',sans-serif;font-weight:600;display:block;margin-bottom:10px;font-size:1.1rem}
-.project{background:linear-gradient(180deg,var(--paper),var(--paper-2))}
-.deliv{display:flex;flex-direction:column;gap:18px;margin-top:48px}
-.d-item{display:grid;grid-template-columns:74px 1fr;gap:26px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 32px}
-.d-item .ico{width:74px;height:74px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center}
-.d-item .ico svg{width:32px;height:32px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
-.d-item strong{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin-bottom:6px}
-.d-item p{font-size:.97rem}
-.timeline{background:var(--ink);color:var(--paper)}
-.timeline h2{color:var(--paper)}
-.months{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
-.month{border:1px solid rgba(246,241,230,.16);border-radius:14px;padding:32px 28px;background:rgba(246,241,230,.05)}
-.month .m{font-family:'Fraunces',serif;font-weight:300;font-size:2rem;color:var(--gold-soft);line-height:1;margin-bottom:14px}
-.month strong{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--paper);margin-bottom:8px}
-.month p{font-size:.92rem;color:rgba(246,241,230,.78)}
-.transform{background:var(--paper)}
-.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
-.tcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 30px}
-.tcard .from{font-family:'Inter',sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:line-through;margin-bottom:10px;display:block}
-.tcard .toV{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--ink);line-height:1.35}
-.tcard .toV b{color:var(--gold)}
-.invest{background:linear-gradient(165deg,var(--ink-2),var(--ink));color:var(--paper)}
-.invest h2{color:var(--paper)}
-.invest .section-intro{color:rgba(246,241,230,.82)}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
-.plan{border:1px solid rgba(246,241,230,.18);border-radius:16px;padding:38px 30px;background:rgba(246,241,230,.05);display:flex;flex-direction:column;text-align:center;transition:border-color .3s,transform .3s}
-.plan:hover{border-color:var(--gold);transform:translateY(-4px)}
-.plan.featured{border-color:var(--gold);background:rgba(201,162,39,.1);position:relative}
-.plan.featured::before{content:"Melhor valor";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-family:'Inter',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 18px;border-radius:100px;white-space:nowrap}
-.plan .plabel{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,230,.65);margin-bottom:18px}
-.plan .pval{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.7rem,2.6vw,2.2rem);color:var(--gold-soft);line-height:1.1}
-.plan .psub{font-family:'Inter',sans-serif;font-size:.8rem;color:rgba(246,241,230,.7);margin-top:8px;margin-bottom:22px}
-.plan .pdesc{font-size:.9rem;color:rgba(246,241,230,.78);font-style:italic;margin-top:auto}
-.invest .cta-line{text-align:center;margin-top:56px}
-.invest .cta-line .btn{font-size:1.05rem;padding:20px 52px}
-.invest .assur{text-align:center;margin-top:26px;font-family:'Inter',sans-serif;font-size:.82rem;color:rgba(246,241,230,.6)}
-.terms{background:var(--paper)}
-.tbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:44px 48px;margin-top:44px}
-.tbox ul{list-style:none}
-.tbox li{padding:11px 0 11px 30px;position:relative;font-size:.99rem;border-bottom:1px solid rgba(20,48,42,.07)}
-.tbox li:last-child{border-bottom:none}
-.tbox li::before{content:"✓";position:absolute;left:0;top:10px;color:var(--gold);font-weight:700;font-family:'Inter',sans-serif}
-.final{background:radial-gradient(900px 460px at 50% 0%,rgba(201,162,39,.14),transparent 60%),linear-gradient(165deg,var(--ink),var(--ink-2));color:var(--paper);text-align:center;padding:110px 24px}
-.final blockquote{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.5rem,3.4vw,2.4rem);line-height:1.32;max-width:22em;margin:24px auto 44px}
-.final blockquote b{font-weight:600;font-style:normal;color:var(--gold-soft)}
-footer{background:var(--ink);color:rgba(246,241,230,.6);padding:36px 24px;text-align:center;font-family:'Inter',sans-serif;font-size:.78rem;letter-spacing:.08em}
-footer b{color:var(--gold-soft);font-weight:600}
-@media (max-width:860px){section{padding:70px 20px}.wgrid,.tgrid,.months,.plans{grid-template-columns:1fr}.plan.featured{order:-1}.d-item{grid-template-columns:1fr}.tbox{padding:32px 26px}}
+.btn{display:inline-block;font-family:'Fraunces',serif;font-weight:500;font-size:.98rem;text-decoration:none;background:var(--gold);color:#1C1508;padding:14px 32px;border-radius:4px;transition:background .25s,transform .2s}
+.btn:hover{background:var(--champagne);transform:translateY(-2px)}
+
+/* ===== BARRA SUPERIOR ===== */
+.topbar{background:var(--bar);padding:16px 28px}
+.topbar .in{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.topbar .bname{font-family:'Fraunces',serif;font-size:.82rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream)}
+.topbar .btag{font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+
+/* ===== HERO ===== */
+/* FOTO 1 — hero.jpg: ambiente do atendimento (poltrona, luminária, caderno) */
+.hero{background-image:linear-gradient(100deg,rgba(16,12,6,.92) 0%,rgba(16,12,6,.6) 36%,rgba(16,12,6,.12) 66%,rgba(16,12,6,0) 85%),url('hero.jpg'),radial-gradient(760px 520px at 72% 40%,rgba(198,160,76,.3),transparent 65%),linear-gradient(115deg,#1A130A,#2B1D0E);background-size:cover;background-position:66% center;color:var(--cream);padding:96px 28px 120px;position:relative}
+.hero .inner{max-width:1100px;margin:0 auto}
+.hero h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.9rem,3.6vw,2.85rem);line-height:1.24;margin:18px 0 20px;max-width:16em;color:#F7F3E8}
+.hero .lead{max-width:30em;color:rgba(244,240,228,.82);font-size:.92rem;margin-bottom:34px}
+.metrics{max-width:1100px;margin:76px auto -58px;position:relative;z-index:2;border:1px solid rgba(198,160,76,.55);border-radius:8px;background:rgba(14,10,5,.72);backdrop-filter:blur(3px);display:flex;padding:26px 12px}
+.metrics .mi{flex:1;text-align:center;padding:8px 16px}
+.metrics .mi + .mi{border-left:1px solid rgba(198,160,76,.4)}
+.metrics .mi strong{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.35rem,2.3vw,1.85rem);color:var(--champagne);display:block;line-height:1.2}
+.metrics .mi strong b{font-weight:500;font-size:1.25em;color:var(--gold)}
+.metrics .mi span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,240,228,.7)}
+
+/* ===== VOCÊ RECONHECE ===== */
+.who{background:var(--cream);padding:132px 0 96px;text-align:center}
+.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px;text-align:left}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.wcard .ph{aspect-ratio:4/3;background-size:cover;background-position:center}
+/* FOTOS 2–5 — who1.jpg a who4.jpg: cenas emocionais (janela, quarto infantil, criança, mesa com caderno) */
+.wcard:nth-child(1) .ph{background-image:url('who1.jpg'),linear-gradient(140deg,#2B2417,#4A3A22)}
+.wcard:nth-child(2) .ph{background-image:url('who2.jpg'),linear-gradient(140deg,#241E14,#41331E)}
+.wcard:nth-child(3) .ph{background-image:url('who3.jpg'),linear-gradient(140deg,#221C12,#3D3120)}
+.wcard:nth-child(4) .ph{background-image:url('who4.jpg'),linear-gradient(140deg,#2A2316,#463823)}
+.wcard p{padding:22px 24px;font-size:.85rem;line-height:1.6}
+
+/* ===== ESTEIRA ===== */
+.esteira{background:var(--forest-2);color:var(--cream);padding:92px 0}
+.esteira h2{color:#F5F1E6}
+.esteira .intro{max-width:40em;color:rgba(244,240,228,.78);font-size:.9rem}
+.steps{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:18px;margin-top:48px}
+.step{border:1px solid rgba(198,160,76,.5);border-radius:8px;padding:32px 28px;background:rgba(13,22,17,.35)}
+.step .snum{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.9rem;color:var(--gold);line-height:1;margin-bottom:14px}
+.step strong{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.12rem;color:var(--champagne);margin-bottom:10px}
+.step p{font-size:.82rem;color:rgba(244,240,228,.75)}
+.step.here{background:rgba(198,160,76,.13);border-color:var(--gold);position:relative}
+.step.here::before{content:"Este projeto";position:absolute;top:-11px;left:26px;background:var(--gold);color:#1C1508;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:5px 14px;border-radius:3px}
+
+/* ===== COMO FUNCIONA ===== */
+.project{background:var(--forest);color:var(--cream);padding:92px 0;position:relative;overflow:hidden}
+.project::after{content:"";position:absolute;right:-70px;top:0;bottom:0;width:340px;background:radial-gradient(280px 420px at 80% 30%,rgba(198,160,76,.12),transparent 70%);pointer-events:none}
+.project .phead{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:end;margin-bottom:54px}
+.project h2{color:#F5F1E6;margin-bottom:0}
+.project .intro{color:rgba(244,240,228,.78);font-size:.9rem}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr)}
+.d-item{padding:0 26px;text-align:center}
+.d-item + .d-item{border-left:1px solid rgba(198,160,76,.3)}
+.d-item svg{width:52px;height:52px;stroke:var(--gold);fill:none;stroke-width:1.2;margin-bottom:20px}
+.d-item strong{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.08rem;color:#F5F1E6;margin-bottom:12px;line-height:1.35}
+.d-item p{font-size:.8rem;color:rgba(244,240,228,.72)}
+
+/* ===== JORNADA ===== */
+.timeline{background:var(--abyss);color:var(--cream);padding:92px 0;text-align:center}
+.timeline h2{color:#F5F1E6}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:58px;position:relative}
+.months::before{content:"";position:absolute;top:31px;left:16%;right:16%;height:1px;background:rgba(198,160,76,.55)}
+.months .dia{position:absolute;top:27px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);z-index:1}
+.months .dia.d1{left:33.2%}
+.months .dia.d2{left:66%}
+.month{position:relative}
+.month .node{width:62px;height:62px;border-radius:50%;border:1px solid var(--gold);background:var(--abyss);margin:0 auto 22px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.2rem;color:var(--champagne);position:relative;z-index:2}
+.month strong{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.18rem;color:#F5F1E6;margin-bottom:12px}
+.month p{font-size:.82rem;color:rgba(244,240,228,.72);max-width:26em;margin:0 auto}
+
+/* ===== TRANSFORMAÇÃO ===== */
+.transform{background:var(--cream);padding:92px 0}
+.tsplit{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.thdr{display:grid;grid-template-columns:1fr 44px 1fr;gap:14px;align-items:center;margin-bottom:18px;font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.thdr .arr{color:var(--gold);font-size:1rem;text-align:center;letter-spacing:0}
+.thdr .r{text-align:left;color:#6B6A55}
+.trow{display:grid;grid-template-columns:1fr 44px 1fr;gap:14px;align-items:stretch;margin-bottom:12px}
+.trow .from{background:var(--olive);color:#E8E2CC;border-radius:8px;padding:18px 20px;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;line-height:1.5}
+.trow .go{display:flex;align-items:center;justify-content:center}
+.trow .go i{width:34px;height:34px;border-radius:50%;background:var(--gold);color:#1C1508;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:.95rem}
+.trow .toV{background:#EDE9DA;border:1px solid var(--line);border-radius:8px;padding:16px 20px;font-size:.84rem;line-height:1.55;display:flex;align-items:center}
+.trow .toV b{color:#8A6B23}
+
+/* ===== INVESTIMENTO ===== */
+.invest{background:var(--forest);color:var(--cream);padding:92px 0}
+.isplit{display:grid;grid-template-columns:.75fr 1.25fr;gap:52px;align-items:start}
+.invest h2{color:#F5F1E6}
+.invest .intro{color:rgba(244,240,228,.78);font-size:.88rem}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.plan{border:1px solid rgba(198,160,76,.55);border-radius:8px;padding:32px 22px;display:flex;flex-direction:column}
+.plan.featured{background:rgba(198,160,76,.12);border-color:var(--gold)}
+.plan .plabel{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.plan .pval{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.45rem,2.2vw,1.8rem);color:var(--champagne);line-height:1.1}
+.plan .psub{font-size:.74rem;color:rgba(244,240,228,.75);margin-top:8px;margin-bottom:16px}
+.plan .pdesc{font-size:.78rem;color:rgba(244,240,228,.68);margin-top:auto}
+.invest .cta-line{text-align:center;margin-top:46px}
+.invest .assur{text-align:center;margin-top:22px;font-size:.72rem;color:rgba(244,240,228,.55)}
+
+/* ===== COMBINADOS ===== */
+.terms{background:var(--cream);padding:92px 0}
+.tsplit2{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.terms ul{list-style:none}
+.terms li{padding:15px 0;font-size:.86rem;line-height:1.6;border-bottom:1px solid var(--line)}
+.terms li:first-child{padding-top:4px}
+.terms li:last-child{border-bottom:none}
+
+/* ===== FINAL ===== */
+/* FOTO 6 — final.jpg: mesa com abajur e caderno, clima noturno */
+.final{background-image:linear-gradient(100deg,rgba(19,13,7,.92) 0%,rgba(19,13,7,.6) 55%,rgba(19,13,7,.3) 100%),url('final.jpg'),radial-gradient(700px 480px at 78% 60%,rgba(198,160,76,.26),transparent 65%),linear-gradient(115deg,#181109,#2A1C0E);background-size:cover;background-position:center;color:var(--cream);padding:120px 0}
+.final blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.45rem,2.9vw,2.2rem);line-height:1.36;max-width:19em;margin:18px 0 38px;color:#F7F3E8}
+.final blockquote b{font-weight:500;color:var(--champagne)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--bar);color:rgba(244,240,228,.6);padding:50px 28px;text-align:center}
+footer .fname{font-family:'Fraunces',serif;font-size:.88rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+footer .fproj{font-family:'Fraunces',serif;font-size:.9rem;color:rgba(244,240,228,.85);margin-bottom:14px}
+footer .ftags{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,240,228,.5);line-height:2}
+footer .fcontact{margin-top:20px;padding-top:20px;border-top:1px solid rgba(198,160,76,.18);font-size:.76rem;max-width:640px;margin-left:auto;margin-right:auto}
+footer b{color:var(--champagne);font-weight:600}
+
+@media (max-width:920px){
+.hero{padding:72px 24px 96px}
+.metrics{flex-direction:column;gap:20px;margin-top:56px;padding:26px 20px}
+.metrics .mi + .mi{border-left:none;border-top:1px solid rgba(198,160,76,.35);padding-top:20px}
+.who{padding:110px 0 72px}
+.wgrid,.steps,.plans{grid-template-columns:1fr}
+.project .phead,.tsplit,.isplit,.tsplit2{grid-template-columns:1fr;gap:26px}
+.dgrid{grid-template-columns:1fr;gap:38px}
+.d-item + .d-item{border-left:none;border-top:1px solid rgba(198,160,76,.3);padding-top:38px}
+.months{grid-template-columns:1fr;gap:44px}
+.months::before,.months .dia{display:none}
+.thdr{display:none}
+.trow{grid-template-columns:1fr;gap:8px}
+.trow .go{transform:rotate(90deg)}
+.esteira,.project,.timeline,.transform,.invest,.terms{padding:70px 0}
+.final{padding:92px 0}
+}
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="in">
+    <span class="bname">Carolina Amorim</span>
+    <span class="btag">Governança Familiar</span>
+  </div>
+</div>
+
 <header class="hero">
-  <svg class="river" viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M -40 620 C 240 540, 380 700, 640 600 S 1080 440, 1480 540"/>
-  </svg>
-  <div class="wrap">
+  <div class="inner">
     <p class="eyebrow">Projeto de Reorganização Familiar · Carolina Amorim</p>
-    <h1>Três meses para transformar o conflito da sua família <em>em um plano de reconstrução.</em></h1>
-    <p>Um acompanhamento estruturado, com condução próxima e entregas concretas — para você sair da confusão e assumir a direção das relações da sua família.</p>
+    <h1>Três meses para transformar o conflito da sua família em um plano de reconstrução.</h1>
+    <p class="lead">Um acompanhamento estruturado, com condução próxima e entregas concretas — para você sair da confusão e assumir a direção das relações da sua família.</p>
     <a class="btn" href="#investimento">Quero conhecer o projeto</a>
-    <div class="meta">
-      <div><strong>3 meses</strong><span>de acompanhamento</span></div>
-      <div><strong>4 sessões</strong><span>de estruturação</span></div>
-      <div><strong>1 plano</strong><span>de parentalidade familiar</span></div>
+    <div class="metrics">
+      <div class="mi"><strong><b>3</b> meses</strong><span>de acompanhamento</span></div>
+      <div class="mi"><strong><b>12</b> sessões</strong><span>4 encontros por mês</span></div>
+      <div class="mi"><strong><b>2</b> planos</strong><span>governança + parentalidade</span></div>
     </div>
   </div>
 </header>
@@ -108,39 +190,72 @@ footer b{color:var(--gold-soft);font-weight:600}
     <p class="eyebrow">Este projeto é para você se</p>
     <h2>Você reconhece a sua família aqui?</h2>
     <div class="wgrid">
-      <div class="wcard">O conflito já dura tempo demais — e cada tentativa de conversa termina pior do que começou.</div>
-      <div class="wcard">Vocês não concordam sobre a criação dos filhos, e quem sente as consequências são eles.</div>
-      <div class="wcard">Você vê alguém que ama sofrer com uma briga que nem escolheu — e não sabe como ajudar.</div>
-      <div class="wcard">Você já entendeu que "vencer" a disputa não devolve o vínculo. Agora quer resolver de verdade.</div>
+      <div class="wcard"><div class="ph" role="img" aria-label=""></div>
+      <p>O conflito já dura tempo demais — e cada tentativa de conversa termina pior do que começou.</p></div>
+      <div class="wcard"><div class="ph" role="img" aria-label=""></div>
+      <p>Vocês não concordam sobre a criação dos filhos, e quem sente as consequências são eles.</p></div>
+      <div class="wcard"><div class="ph" role="img" aria-label=""></div>
+      <p>Você vê alguém que ama sofrer com uma briga que nem escolheu — e não sabe como ajudar.</p></div>
+      <div class="wcard"><div class="ph" role="img" aria-label=""></div>
+      <p>Você já entendeu que "vencer" a disputa não devolve o vínculo. Agora quer resolver de verdade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="esteira">
+  <div class="wrap reveal">
+    <p class="eyebrow">O caminho do acompanhamento</p>
+    <h2>Onde este projeto se encaixa</h2>
+    <p class="intro">O trabalho com Carolina acontece em três profundidades. Cada família entra pela porta que faz sentido para o seu momento.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="snum">I</div>
+        <strong>Consulta estratégica</strong>
+        <p>Um encontro único para mapear o conflito, compreender a dinâmica e sair com uma direção clara.</p>
+      </div>
+      <div class="step">
+        <div class="snum">II</div>
+        <strong>Ciclo de 4 encontros</strong>
+        <p>Para demandas pontuais: plano de parentalidade para acordos judiciais ou extrajudiciais, governança para assembleia de sócios, definição de guarda ou de escola, condução de divórcios, retomada de vínculo familiar. Aqui mapeamos e damos direção.</p>
+      </div>
+      <div class="step here">
+        <div class="snum">III</div>
+        <strong>Projeto trimestral</strong>
+        <p>O acompanhamento completo: para executar o plano construído no ciclo anterior — ou para conflitos crônicos, que pedem escuta prolongada, aprofundamento nas raízes e leitura do sistema familiar. Carolina caminha com a família na aplicação, trabalhando a quebra de objeções até a autonomia.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="project">
   <div class="wrap reveal">
-    <p class="eyebrow">O que está incluído</p>
-    <h2>Como funciona o projeto</h2>
-    <p class="section-intro">Durante três meses, você não recebe apenas sessões — recebe estrutura, direção e um plano que fica com a sua família para sempre.</p>
-    <div class="deliv">
+    <div class="phead">
+      <div>
+        <p class="eyebrow">O que está incluído</p>
+        <h2>Como funciona o projeto</h2>
+      </div>
+      <p class="intro">Durante três meses, você não recebe apenas sessões — recebe estrutura, direção e planos que ficam com a sua família para sempre.</p>
+    </div>
+    <div class="dgrid">
       <div class="d-item">
-        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
-        <div><strong>4 sessões de estruturação</strong>
-        <p>Encontros profundos com Carolina para analisar a dinâmica do conflito, definir acordos de postura e conduzir cada etapa da reorganização das relações.</p></div>
+        <svg viewBox="0 0 52 52"><circle cx="18" cy="18" r="6"/><circle cx="34" cy="18" r="6"/><path d="M8 42v-2a10 10 0 0 1 20 0v2M24 42v-2a10 10 0 0 1 20 0v2"/></svg>
+        <strong>12 sessões de acompanhamento</strong>
+        <p>Quatro encontros por mês com Carolina para aprofundar nas raízes do conflito, compreender o sistema familiar e conduzir cada etapa da reorganização das relações.</p>
       </div>
       <div class="d-item">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <div><strong>Assistência contínua entre sessões</strong>
-        <p>Acesso direto pelo WhatsApp e ligações eventuais quando a vida acontece — porque conflito não espera a próxima sessão para se manifestar.</p></div>
+        <svg viewBox="0 0 52 52"><rect x="16" y="6" width="20" height="40" rx="4"/><path d="M22 38h8"/><path d="M21 16h10M21 22h7"/></svg>
+        <strong>Assistência contínua entre sessões</strong>
+        <p>Acesso direto pelo WhatsApp e ligações eventuais quando a vida acontece — porque conflito não espera a próxima sessão para se manifestar.</p>
       </div>
       <div class="d-item">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
-        <div><strong>Material de feedback após cada sessão</strong>
-        <p>Depois de cada encontro, você recebe um documento com os pontos trabalhados, as orientações combinadas e os próximos passos — nada importante se perde no ar.</p></div>
+        <svg viewBox="0 0 52 52"><path d="M30 6H14a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V17z"/><path d="M30 6v11h11"/><path d="M18 27h16M18 34h11"/></svg>
+        <strong>Material de feedback após cada sessão</strong>
+        <p>Depois de cada encontro, você recebe um documento com os pontos trabalhados, as orientações combinadas e os próximos passos — nada importante se perde no ar.</p>
       </div>
       <div class="d-item">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div><strong>Plano de Parentalidade ao final do projeto</strong>
-        <p>O grande entregável: um plano completo, elaborado para a sua família, com o plano de ação familiar para sustentar os acordos e conduzir as relações daqui para frente — com autonomia.</p></div>
+        <svg viewBox="0 0 52 52"><path d="M12 8a4 4 0 0 1 4-4h24v40H16a4 4 0 0 0-4 4z"/><path d="M12 44a4 4 0 0 0 4 4h24"/><path d="M20 14h12M20 21h8"/></svg>
+        <strong>Plano de Governança + Plano de Parentalidade</strong>
+        <p>Os grandes entregáveis: os planos elaborados para a sua família — o plano de ação que sustenta os acordos e conduz as relações daqui para frente, com autonomia.</p>
       </div>
     </div>
   </div>
@@ -151,56 +266,73 @@ footer b{color:var(--gold-soft);font-weight:600}
     <p class="eyebrow">A jornada</p>
     <h2>Mês a mês, do diagnóstico à autonomia</h2>
     <div class="months">
-      <div class="month"><div class="m">1º</div><strong>Compreender</strong>
-      <p>Escuta profunda, análise da dinâmica do conflito e definição dos primeiros acordos de postura. Você entende, com clareza, o que está realmente acontecendo.</p></div>
-      <div class="month"><div class="m">2º</div><strong>Reorganizar</strong>
-      <p>Implementação acompanhada: alinhamentos, repertório para as conversas difíceis e ajustes de rota com o suporte contínuo de Carolina.</p></div>
-      <div class="month"><div class="m">3º</div><strong>Sustentar</strong>
-      <p>Consolidação dos avanços e entrega do Plano de Parentalidade com o plano de ação familiar — o mapa que fica com vocês para seguir sem depender de ninguém.</p></div>
+      <span class="dia d1"></span><span class="dia d2"></span>
+      <div class="month">
+        <div class="node">1º</div>
+        <strong>Compreender</strong>
+        <p>Escuta profunda, aprofundamento nas raízes do conflito e leitura do sistema familiar. Você entende, com clareza, o que está realmente acontecendo.</p>
+      </div>
+      <div class="month">
+        <div class="node">2º</div>
+        <strong>Reorganizar</strong>
+        <p>Construção do plano de governança e do plano de parentalidade: alinhamentos, acordos de postura e repertório para as conversas difíceis, com ajustes de rota semanais.</p>
+      </div>
+      <div class="month">
+        <div class="node">3º</div>
+        <strong>Sustentar</strong>
+        <p>Aplicação acompanhada: quebra de objeções, consolidação dos avanços e entrega dos planos — o mapa que fica com vocês para seguir sem depender de ninguém.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="transform">
-  <div class="wrap reveal">
-    <p class="eyebrow">O que muda em três meses</p>
-    <h2>De onde você está para onde pode chegar</h2>
-    <div class="tgrid">
-      <div class="tcard"><span class="from">Confusão e reatividade</span>
-      <span class="toV">Clareza sobre a dinâmica real do conflito — e sobre <b>o seu papel</b> nela</span></div>
-      <div class="tcard"><span class="from">Não saber o que falar</span>
-      <span class="toV">Repertório prático: <b>o que dizer e como agir</b> nas conversas que você adia</span></div>
-      <div class="tcard"><span class="from">Cada um por si dentro de casa</span>
-      <span class="toV">Acordos de postura que <b>alinham os adultos</b> — mesmo quando não concordam em tudo</span></div>
-      <div class="tcard"><span class="from">Depender de terceiros para sempre</span>
-      <span class="toV">Um plano próprio para <b>conduzir sua família com autonomia</b> dali em diante</span></div>
+  <div class="wrap tsplit reveal">
+    <div>
+      <p class="eyebrow">O que muda em três meses</p>
+      <h2>De onde você está para onde pode chegar</h2>
+    </div>
+    <div>
+      <div class="thdr"><span>De onde você está</span><span class="arr">→</span><span class="r">Para onde pode chegar</span></div>
+      <div class="trow"><div class="from">Confusão e reatividade</div><div class="go"><i>→</i></div>
+      <div class="toV">Clareza sobre a dinâmica real do conflito — e sobre <b>o seu papel</b> nela</div></div>
+      <div class="trow"><div class="from">Não saber o que falar</div><div class="go"><i>→</i></div>
+      <div class="toV">Repertório prático: <b>o que dizer e como agir</b> nas conversas que você adia</div></div>
+      <div class="trow"><div class="from">Cada um por si dentro de casa</div><div class="go"><i>→</i></div>
+      <div class="toV">Acordos de postura que <b>alinham os adultos</b> — mesmo quando não concordam em tudo</div></div>
+      <div class="trow"><div class="from">Depender de terceiros para sempre</div><div class="go"><i>→</i></div>
+      <div class="toV">Planos próprios para <b>conduzir sua família com autonomia</b> dali em diante</div></div>
     </div>
   </div>
 </section>
 
 <section class="invest" id="investimento">
   <div class="wrap reveal">
-    <p class="eyebrow">Investimento</p>
-    <h2>Três formas de realizar o projeto</h2>
-    <p class="section-intro">O mesmo projeto completo, com a forma de pagamento que fizer mais sentido para você.</p>
-    <div class="plans">
-      <div class="plan">
-        <div class="plabel">Mensal</div>
-        <div class="pval">3× R$ 4.287</div>
-        <div class="psub">Três pagamentos mensais</div>
-        <p class="pdesc">Um pagamento a cada mês do projeto, acompanhando a jornada.</p>
+    <div class="isplit">
+      <div>
+        <p class="eyebrow">Investimento</p>
+        <h2>Três formas de realizar o projeto</h2>
+        <p class="intro">O mesmo projeto completo, com a forma de pagamento que fizer mais sentido para você.</p>
       </div>
-      <div class="plan featured">
-        <div class="plabel">À vista</div>
-        <div class="pval">R$ 11.333</div>
-        <div class="psub">Pagamento único com desconto</div>
-        <p class="pdesc">O valor total do projeto com condição especial para pagamento à vista.</p>
-      </div>
-      <div class="plan">
-        <div class="plabel">Cartão de crédito</div>
-        <div class="pval">Até 12×</div>
-        <div class="psub">Parcelamento no cartão</div>
-        <p class="pdesc">Comece agora e distribua o investimento ao longo do ano.</p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plabel">Mensal</div>
+          <div class="pval">3× R$ 4.287</div>
+          <div class="psub">Três pagamentos mensais</div>
+          <p class="pdesc">Um pagamento a cada mês do projeto, acompanhando a jornada.</p>
+        </div>
+        <div class="plan featured">
+          <div class="plabel">À vista</div>
+          <div class="pval">R$ 11.333</div>
+          <div class="psub">Pagamento único com desconto</div>
+          <p class="pdesc">O valor total do projeto com condição especial para pagamento à vista.</p>
+        </div>
+        <div class="plan">
+          <div class="plabel">Cartão de crédito</div>
+          <div class="pval">Até 12×</div>
+          <div class="psub">Parcelamento no cartão</div>
+          <p class="pdesc">Comece agora e distribua o investimento ao longo do ano.</p>
+        </div>
       </div>
     </div>
     <div class="cta-line"><a class="btn" href="[LINK-WHATSAPP]">Quero começar meu projeto</a></div>
@@ -209,18 +341,18 @@ footer b{color:var(--gold-soft);font-weight:600}
 </section>
 
 <section class="terms">
-  <div class="wrap reveal">
-    <p class="eyebrow">Transparência desde o início</p>
-    <h2>Combinados que protegem o seu processo</h2>
-    <div class="tbox">
-      <ul>
-        <li>As 4 sessões são agendadas em conjunto, respeitando o ritmo do processo de cada família</li>
-        <li>O canal de WhatsApp é para assistência de continuidade; mensagens são respondidas em até 24–48h úteis</li>
-        <li>Situações que exigem análise aprofundada ou mediação em tempo real são direcionadas para sessões — garantindo que nenhum tema importante seja tratado pela metade</li>
-        <li>O material de feedback é enviado após cada sessão, e o Plano de Parentalidade ao final do terceiro mês</li>
-        <li>Todo o processo é regido por contrato com confidencialidade total</li>
-      </ul>
+  <div class="wrap tsplit2 reveal">
+    <div>
+      <p class="eyebrow">Transparência desde o início</p>
+      <h2>Combinados que protegem o seu processo</h2>
     </div>
+    <ul>
+      <li>As sessões acontecem no ritmo de 4 encontros por mês — 12 no total — agendadas em conjunto, respeitando o processo de cada família</li>
+      <li>O canal de WhatsApp é para assistência de continuidade; mensagens são respondidas em até 24–48h úteis</li>
+      <li>Situações que exigem análise aprofundada ou mediação em tempo real são direcionadas para sessões — garantindo que nenhum tema importante seja tratado pela metade</li>
+      <li>O material de feedback é enviado após cada sessão; o Plano de Governança e o Plano de Parentalidade são entregues ao final do terceiro mês</li>
+      <li>Todo o processo é regido por contrato com confidencialidade total</li>
+    </ul>
   </div>
 </section>
 
@@ -232,7 +364,12 @@ footer b{color:var(--gold-soft);font-weight:600}
   </div>
 </section>
 
-<footer><b>Carolina Amorim — Relações Integradas</b> · Consultoria estratégica de conflitos familiares · [Contato / WhatsApp / Instagram]</footer>
+<footer>
+  <div class="fname">Carolina Amorim</div>
+  <div class="fproj">Projeto de Reorganização Familiar</div>
+  <div class="ftags">Era Relações Integradas<br>Governança Familiar</div>
+  <div class="fcontact"><b>Contato</b> · [Contato / WhatsApp / Instagram]</div>
+</footer>
 
 <script>
 const io=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&(t.target.classList.add('in'),io.unobserve(t.target))})},{threshold:.12});
