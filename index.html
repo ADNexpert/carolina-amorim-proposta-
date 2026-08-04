@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto de Reorganização Familiar — Carolina Amorim</title>
+<title>Diagnóstico &amp; Direção Familiar — Carolina Amorim</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -42,9 +42,9 @@ h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3re
 .metrics{max-width:1100px;margin:76px auto -58px;position:relative;z-index:2;border:1px solid rgba(198,160,76,.55);border-radius:8px;background:rgba(14,10,5,.72);backdrop-filter:blur(3px);display:flex;padding:26px 12px}
 .metrics .mi{flex:1;text-align:center;padding:8px 16px}
 .metrics .mi + .mi{border-left:1px solid rgba(198,160,76,.4)}
-.metrics .mi strong{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.35rem,2.3vw,1.85rem);color:var(--champagne);display:block;line-height:1.2}
+.metrics .mi strong{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.15rem,2vw,1.45rem);color:var(--champagne);display:block;line-height:1.2;margin-bottom:8px}
 .metrics .mi strong b{font-weight:500;font-size:1.25em;color:var(--gold)}
-.metrics .mi span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,240,228,.7)}
+.metrics .mi span{font-size:.76rem;color:rgba(244,240,228,.75);line-height:1.55;display:block;max-width:22em;margin:0 auto}
 
 /* ===== VOCÊ RECONHECE ===== */
 .who{background:var(--cream);padding:132px 0 96px;text-align:center}
@@ -62,7 +62,7 @@ h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3re
 .esteira{background:var(--forest-2);color:var(--cream);padding:92px 0}
 .esteira h2{color:#F5F1E6}
 .esteira .intro{max-width:40em;color:rgba(244,240,228,.78);font-size:.9rem}
-.steps{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:18px;margin-top:48px}
+.steps{display:grid;grid-template-columns:1fr 1.4fr;gap:18px;margin-top:48px}
 .step{border:1px solid rgba(198,160,76,.5);border-radius:8px;padding:32px 28px;background:rgba(13,22,17,.35)}
 .step .snum{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:1.9rem;color:var(--gold);line-height:1;margin-bottom:14px}
 .step strong{display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.12rem;color:var(--champagne);margin-bottom:10px}
@@ -114,13 +114,33 @@ h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3re
 .isplit{display:grid;grid-template-columns:.75fr 1.25fr;gap:52px;align-items:start}
 .invest h2{color:#F5F1E6}
 .invest .intro{color:rgba(244,240,228,.78);font-size:.88rem}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:center}
+.plan .btn{margin-top:20px;padding:12px 22px;font-size:.9rem}
+.plan .pnote{font-size:.68rem;color:rgba(244,240,228,.55);margin-top:auto;padding-top:14px;line-height:1.55}
+
+/* ===== A RAIZ DO CONFLITO ===== */
+.roots{background:var(--noir);color:var(--cream);padding:96px 0;position:relative;overflow:hidden}
+.roots::after{content:"";position:absolute;left:-80px;top:-40px;width:420px;height:420px;background:radial-gradient(circle,rgba(198,160,76,.14),transparent 70%);pointer-events:none}
+.roots h2{color:#F7F3E8;max-width:18em}
+.roots ul{list-style:none;margin:38px 0;max-width:44em}
+.roots li{padding:16px 0 16px 24px;border-left:1px solid rgba(198,160,76,.5);font-size:.9rem;color:rgba(244,240,228,.8);line-height:1.7}
+.roots li + li{margin-top:6px}
+.roots .rclose{font-size:.9rem;color:rgba(244,240,228,.8);max-width:40em;margin-bottom:10px}
+.roots .rq{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.4;color:var(--champagne);max-width:24em;margin-top:16px}
+.roots .rq b{font-weight:500;color:var(--gold);font-style:normal}
+
+/* ===== CUSTO DA DISPERSÃO ===== */
+.cost{background:var(--forest-2);color:var(--cream);padding:92px 0}
+.cost h2{color:#F5F1E6}
+.cost .csplit{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.cost p.ctext{font-size:.88rem;color:rgba(244,240,228,.78);margin-bottom:16px;line-height:1.7}
+.cost .cq{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.4;color:var(--champagne);border-left:2px solid var(--gold);padding-left:22px;margin-top:26px}
 .plan{border:1px solid rgba(198,160,76,.55);border-radius:8px;padding:32px 22px;display:flex;flex-direction:column}
 .plan.featured{background:rgba(198,160,76,.12);border-color:var(--gold)}
 .plan .plabel{font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .plan .pval{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.45rem,2.2vw,1.8rem);color:var(--champagne);line-height:1.1}
 .plan .psub{font-size:.74rem;color:rgba(244,240,228,.75);margin-top:8px;margin-bottom:16px}
-.plan .pdesc{font-size:.78rem;color:rgba(244,240,228,.68);margin-top:auto}
+.plan .pdesc{font-size:.78rem;color:rgba(244,240,228,.68);margin-top:16px}
 .invest .cta-line{text-align:center;margin-top:46px}
 .invest .assur{text-align:center;margin-top:22px;font-size:.72rem;color:rgba(244,240,228,.55)}
 
@@ -154,7 +174,7 @@ footer b{color:var(--champagne);font-weight:600}
 .metrics .mi + .mi{border-left:none;border-top:1px solid rgba(198,160,76,.35);padding-top:20px}
 .who{padding:72px 0}
 .wgrid,.steps,.plans{grid-template-columns:1fr}
-.project .phead,.tsplit,.isplit,.tsplit2{grid-template-columns:1fr;gap:26px}
+.project .phead,.tsplit,.isplit,.tsplit2,.cost .csplit{grid-template-columns:1fr;gap:26px}
 .dgrid{grid-template-columns:1fr;gap:38px}
 .d-item + .d-item{border-left:none;border-top:1px solid rgba(198,160,76,.3);padding-top:38px}
 .months{grid-template-columns:1fr;gap:44px}
@@ -162,7 +182,7 @@ footer b{color:var(--champagne);font-weight:600}
 .thdr{display:none}
 .trow{grid-template-columns:1fr;gap:8px}
 .trow .go{transform:rotate(90deg)}
-.esteira,.project,.timeline,.transform,.invest,.terms{padding:70px 0}
+.esteira,.project,.timeline,.transform,.invest,.terms,.cost,.roots{padding:70px 0}
 .final{padding:92px 0}
 }
 </style>
@@ -179,14 +199,14 @@ footer b{color:var(--champagne);font-weight:600}
 <header class="hero">
   <div class="inner">
     <div class="hero-mphoto" role="img" aria-label="Carolina Amorim"></div>
-    <p class="eyebrow">Projeto de Reorganização Familiar</p>
-    <h1>Três meses para transformar o conflito da sua família <em>em um plano de reconstrução.</em></h1>
-    <p class="lead">Um acompanhamento estruturado, com condução próxima e entregas concretas — para você sair da confusão e assumir a direção das relações da sua família.</p>
-    <a class="btn" href="#investimento">Quero conhecer o projeto</a>
+    <p class="eyebrow">Diagnóstico &amp; Direção Familiar</p>
+    <h1>Descubra a raiz dos conflitos da sua família e construa um caminho claro para <em>transformar a dinâmica das suas relações.</em></h1>
+    <p class="lead">Compreenda a dinâmica que sustenta os conflitos da sua família, receba um plano de direção personalizado e conte com acompanhamento para transformar essa clareza em mudanças concretas no dia a dia.</p>
+    <a class="btn" href="#investimento">Quero encontrar uma direção</a>
     <div class="metrics">
-      <div class="mi"><strong><b>3</b> meses</strong><span>de acompanhamento</span></div>
-      <div class="mi"><strong><b>12</b> sessões</strong><span>4 encontros por mês</span></div>
-      <div class="mi"><strong><b>2</b> planos</strong><span>governança + parentalidade</span></div>
+      <div class="mi"><strong>Diagnóstico</strong><span>Leitura aprofundada da dinâmica familiar e da origem do conflito.</span></div>
+      <div class="mi"><strong>Direção</strong><span>Construção de um plano personalizado para orientar decisões, conversas e próximos passos.</span></div>
+      <div class="mi"><strong>Acompanhamento</strong><span>Suporte estruturado para transformar essa direção em mudanças concretas.</span></div>
     </div>
   </div>
 </header>
@@ -205,29 +225,40 @@ footer b{color:var(--champagne);font-weight:600}
       <div class="wcard"><div class="ph" role="img" aria-label=""></div>
       <p>Você já entendeu que "vencer" a disputa não devolve o vínculo. Agora quer resolver de verdade.</p></div>
     </div>
+    <p class="wnote" style="margin-top:38px;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:#6B6A55;max-width:34em;margin-left:auto;margin-right:auto">Não se trata de acumular mais opiniões. Trata-se de organizar a realidade.</p>
+  </div>
+</section>
+
+<section class="roots">
+  <div class="wrap reveal">
+    <p class="eyebrow">A raiz do conflito</p>
+    <h2>Um conflito familiar raramente começa onde parece começar.</h2>
+    <ul>
+      <li>Uma disputa entre irmãos pode esconder anos de ressentimentos nunca elaborados.</li>
+      <li>Uma separação pode encerrar o casamento, mas não os desafios da parentalidade.</li>
+      <li>Um processo judicial pode resolver aspectos legais, sem reorganizar as relações que continuarão existindo depois dele.</li>
+      <li>Uma dificuldade entre pais e filhos pode ser consequência de uma dinâmica que envolve toda a família.</li>
+    </ul>
+    <p class="rclose">Por isso, olhar apenas para o conflito aparente nem sempre produz mudança.</p>
+    <p class="rq">O primeiro passo é compreender a dinâmica que sustenta esse conflito. <b>Só então é possível construir uma direção.</b></p>
   </div>
 </section>
 
 <section class="esteira">
   <div class="wrap reveal">
     <p class="eyebrow">O caminho do acompanhamento</p>
-    <h2>Onde este projeto se encaixa</h2>
-    <p class="intro">O trabalho com Carolina acontece em três profundidades. Cada família entra pela porta que faz sentido para o seu momento.</p>
+    <h2>Como funciona o Diagnóstico &amp; Direção Familiar</h2>
+    <p class="intro">O trabalho pode começar por uma consulta estratégica ou por um processo completo de acompanhamento. A escolha depende da complexidade da situação e do tipo de direção que sua família precisa neste momento.</p>
     <div class="steps">
       <div class="step">
         <div class="snum">I</div>
-        <strong>Consulta estratégica</strong>
-        <p>Um encontro único para mapear o conflito, compreender a dinâmica e sair com uma direção clara.</p>
-      </div>
-      <div class="step">
-        <div class="snum">II</div>
-        <strong>Ciclo de 4 encontros</strong>
-        <p>Para demandas pontuais: plano de parentalidade para acordos judiciais ou extrajudiciais, governança para assembleia de sócios, definição de guarda ou de escola, condução de divórcios, retomada de vínculo familiar. Aqui mapeamos e damos direção.</p>
+        <strong>Consulta Estratégica Familiar</strong>
+        <p>Para compreender uma questão específica, organizar as principais variáveis do caso e receber uma direção inicial. Ideal para quem busca clareza antes de tomar uma decisão importante ou deseja avaliar se há necessidade de um acompanhamento mais profundo.</p>
       </div>
       <div class="step here">
-        <div class="snum">III</div>
-        <strong>Projeto trimestral</strong>
-        <p>O acompanhamento completo: para executar o plano construído no ciclo anterior — ou para conflitos crônicos, que pedem escuta prolongada, aprofundamento nas raízes e leitura do sistema familiar. Carolina caminha com a família na aplicação, trabalhando a quebra de objeções até a autonomia.</p>
+        <div class="snum">II</div>
+        <strong>Diagnóstico &amp; Direção Familiar</strong>
+        <p>Um processo estruturado para compreender profundamente o conflito, construir uma direção personalizada e acompanhar a implementação das decisões ao longo das semanas seguintes. Indicado para famílias que vivem conflitos mais complexos ou que exigem uma reorganização consistente da dinâmica das relações.</p>
       </div>
     </div>
   </div>
@@ -237,31 +268,31 @@ footer b{color:var(--champagne);font-weight:600}
   <div class="wrap reveal">
     <div class="phead">
       <div>
-        <p class="eyebrow">O que está incluído</p>
-        <h2>Como funciona o projeto</h2>
+        <p class="eyebrow">O que você recebe</p>
+        <h2>Muito além dos encontros</h2>
       </div>
-      <p class="intro">Durante três meses, você não recebe apenas sessões — recebe estrutura, direção e planos que ficam com a sua família para sempre.</p>
+      <p class="intro">Durante o processo, cada etapa gera uma compreensão mais profunda da situação e recursos práticos para conduzir a realidade da sua família.</p>
     </div>
     <div class="dgrid">
       <div class="d-item">
         <svg viewBox="0 0 52 52"><circle cx="18" cy="18" r="6"/><circle cx="34" cy="18" r="6"/><path d="M8 42v-2a10 10 0 0 1 20 0v2M24 42v-2a10 10 0 0 1 20 0v2"/></svg>
-        <strong>12 sessões de acompanhamento</strong>
-        <p>Quatro encontros por mês com Carolina para aprofundar nas raízes do conflito, compreender o sistema familiar e conduzir cada etapa da reorganização das relações.</p>
-      </div>
-      <div class="d-item">
-        <svg viewBox="0 0 52 52"><rect x="16" y="6" width="20" height="40" rx="4"/><path d="M22 38h8"/><path d="M21 16h10M21 22h7"/></svg>
-        <strong>Assistência contínua entre sessões</strong>
-        <p>Acesso direto pelo WhatsApp e ligações eventuais quando a vida acontece — porque conflito não espera a próxima sessão para se manifestar.</p>
-      </div>
-      <div class="d-item">
-        <svg viewBox="0 0 52 52"><path d="M30 6H14a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V17z"/><path d="M30 6v11h11"/><path d="M18 27h16M18 34h11"/></svg>
-        <strong>Material de feedback após cada sessão</strong>
-        <p>Depois de cada encontro, você recebe um documento com os pontos trabalhados, as orientações combinadas e os próximos passos — nada importante se perde no ar.</p>
+        <strong>Diagnóstico Estratégico</strong>
+        <p>Leitura aprofundada da dinâmica familiar, dos vínculos e da origem do conflito.</p>
       </div>
       <div class="d-item">
         <svg viewBox="0 0 52 52"><path d="M12 8a4 4 0 0 1 4-4h24v40H16a4 4 0 0 0-4 4z"/><path d="M12 44a4 4 0 0 0 4 4h24"/><path d="M20 14h12M20 21h8"/></svg>
-        <strong>Plano de Governança + Plano de Parentalidade</strong>
-        <p>Os grandes entregáveis: os planos elaborados para a sua família — o plano de ação que sustenta os acordos e conduz as relações daqui para frente, com autonomia.</p>
+        <strong>Direção Personalizada</strong>
+        <p>Organização das prioridades, responsabilidades, limites e decisões mais importantes para o caso.</p>
+      </div>
+      <div class="d-item">
+        <svg viewBox="0 0 52 52"><rect x="16" y="6" width="20" height="40" rx="4"/><path d="M22 38h8"/><path d="M21 16h10M21 22h7"/></svg>
+        <strong>Suporte entre os encontros</strong>
+        <p>Acompanhamento estruturado para apoiar a implementação do plano construído.</p>
+      </div>
+      <div class="d-item">
+        <svg viewBox="0 0 52 52"><path d="M30 6H14a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V17z"/><path d="M30 6v11h11"/><path d="M18 27h16M18 34h11"/></svg>
+        <strong>Dossiê Final de Direção</strong>
+        <p>Um documento que reúne a leitura estratégica do caso, os principais direcionamentos e um plano de continuidade para orientar os próximos passos.</p>
       </div>
     </div>
   </div>
@@ -270,23 +301,23 @@ footer b{color:var(--champagne);font-weight:600}
 <section class="timeline">
   <div class="wrap reveal">
     <p class="eyebrow">A jornada</p>
-    <h2>Mês a mês, do diagnóstico à autonomia</h2>
+    <h2>Da compreensão à autonomia</h2>
     <div class="months">
       <span class="dia d1"></span><span class="dia d2"></span>
       <div class="month">
-        <div class="node">1º</div>
-        <strong>Compreender</strong>
-        <p>Escuta profunda, aprofundamento nas raízes do conflito e leitura do sistema familiar. Você entende, com clareza, o que está realmente acontecendo.</p>
+        <div class="node">I</div>
+        <strong>Diagnosticar</strong>
+        <p>Compreender a origem do conflito, os papéis envolvidos e os padrões que sustentam a situação.</p>
       </div>
       <div class="month">
-        <div class="node">2º</div>
-        <strong>Reorganizar</strong>
-        <p>Construção do plano de governança e do plano de parentalidade: alinhamentos, acordos de postura e repertório para as conversas difíceis, com ajustes de rota semanais.</p>
+        <div class="node">II</div>
+        <strong>Direcionar</strong>
+        <p>Construir um plano personalizado com prioridades, posicionamentos e caminhos possíveis.</p>
       </div>
       <div class="month">
-        <div class="node">3º</div>
-        <strong>Sustentar</strong>
-        <p>Aplicação acompanhada: quebra de objeções, consolidação dos avanços e entrega dos planos — o mapa que fica com vocês para seguir sem depender de ninguém.</p>
+        <div class="node">III</div>
+        <strong>Implementar</strong>
+        <p>Colocar essa direção em prática com acompanhamento, ajustes e apoio ao longo do processo.</p>
       </div>
     </div>
   </div>
@@ -295,19 +326,33 @@ footer b{color:var(--champagne);font-weight:600}
 <section class="transform">
   <div class="wrap tsplit reveal">
     <div>
-      <p class="eyebrow">O que muda em três meses</p>
-      <h2>De onde você está para onde pode chegar</h2>
+      <p class="eyebrow">Transformação</p>
+      <h2>O que muda quando existe direção</h2>
     </div>
     <div>
-      <div class="thdr"><span>De onde você está</span><span class="arr">→</span><span class="r">Para onde pode chegar</span></div>
-      <div class="trow"><div class="from">Confusão e reatividade</div><div class="go"><i>→</i></div>
-      <div class="toV">Clareza sobre a dinâmica real do conflito — e sobre <b>o seu papel</b> nela</div></div>
-      <div class="trow"><div class="from">Não saber o que falar</div><div class="go"><i>→</i></div>
-      <div class="toV">Repertório prático: <b>o que dizer e como agir</b> nas conversas que você adia</div></div>
-      <div class="trow"><div class="from">Cada um por si dentro de casa</div><div class="go"><i>→</i></div>
-      <div class="toV">Acordos de postura que <b>alinham os adultos</b> — mesmo quando não concordam em tudo</div></div>
-      <div class="trow"><div class="from">Depender de terceiros para sempre</div><div class="go"><i>→</i></div>
-      <div class="toV">Planos próprios para <b>conduzir sua família com autonomia</b> dali em diante</div></div>
+      <div class="thdr"><span>Antes</span><span class="arr">→</span><span class="r">Depois</span></div>
+      <div class="trow"><div class="from">Cada nova conversa termina em mais desgaste</div><div class="go"><i>→</i></div>
+      <div class="toV"><span>As conversas passam a ter <b>propósito, clareza e direção</b></span></div></div>
+      <div class="trow"><div class="from">As decisões são tomadas no auge da emoção</div><div class="go"><i>→</i></div>
+      <div class="toV"><span>As decisões passam a ser conduzidas por <b>critérios e responsabilidade</b></span></div></div>
+      <div class="trow"><div class="from">Cada pessoa acredita que o outro é o problema</div><div class="go"><i>→</i></div>
+      <div class="toV"><span>Cada pessoa compreende melhor <b>seu papel dentro da dinâmica familiar</b></span></div></div>
+      <div class="trow"><div class="from">O conflito conduz a rotina da família</div><div class="go"><i>→</i></div>
+      <div class="toV"><span>A família volta a <b>conduzir suas decisões</b></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cost">
+  <div class="wrap csplit reveal">
+    <div>
+      <p class="eyebrow">O custo da dispersão</p>
+      <h2>Quanto custa continuar tomando decisões importantes sem compreender toda a dinâmica?</h2>
+    </div>
+    <div>
+      <p class="ctext">Conflitos familiares não afetam apenas os relacionamentos. Eles podem impactar decisões sobre filhos, patrimônio, empresas familiares, heranças, processos judiciais e a qualidade da convivência.</p>
+      <p class="ctext">Sem uma direção clara, a tendência é repetir conversas improdutivas, acumular orientações desconectadas e adiar decisões que continuam produzindo desgaste.</p>
+      <p class="cq">O Diagnóstico &amp; Direção Familiar existe para organizar essa complexidade e ajudar sua família a construir decisões mais conscientes e sustentáveis.</p>
     </div>
   </div>
 </section>
@@ -317,62 +362,63 @@ footer b{color:var(--champagne);font-weight:600}
     <div class="isplit">
       <div>
         <p class="eyebrow">Investimento</p>
-        <h2>Três formas de realizar o projeto</h2>
-        <p class="intro">O mesmo projeto completo, com a forma de pagamento que fizer mais sentido para você.</p>
+        <h2>Escolha a forma mais adequada para o seu momento</h2>
+        <p class="intro">Você não contrata horas de conversa. Contrata a capacidade especializada de Carolina de ler sistemas familiares complexos e construir uma direção para eles.</p>
       </div>
       <div class="plans">
         <div class="plan">
-          <div class="plabel">Mensal</div>
-          <div class="pval">3× R$ 4.287</div>
-          <div class="psub">Três pagamentos mensais</div>
-          <p class="pdesc">Um pagamento a cada mês do projeto, acompanhando a jornada.</p>
+          <div class="plabel">Porta de entrada</div>
+          <strong style="display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.08rem;color:#F5F1E6;margin-bottom:12px">Consulta Estratégica Familiar</strong>
+          <div class="pval">R$ 2.500</div>
+          <div class="psub">Com análise documental prévia: R$ 3.500</div>
+          <p class="pdesc">Para compreender uma questão específica e receber uma direção inicial.</p>
+          <p class="pnote">O enquadramento da análise documental é definido conforme o tipo e o volume dos materiais.</p>
+          <a class="btn" href="[LINK-WHATSAPP]">Quero agendar minha consulta</a>
         </div>
         <div class="plan featured">
-          <div class="plabel">À vista</div>
-          <div class="pval">R$ 11.333</div>
-          <div class="psub">Pagamento único com desconto</div>
-          <p class="pdesc">O valor total do projeto com condição especial para pagamento à vista.</p>
-        </div>
-        <div class="plan">
-          <div class="plabel">Cartão de crédito</div>
-          <div class="pval">Até 12×</div>
-          <div class="psub">Parcelamento no cartão</div>
-          <p class="pdesc">Comece agora e distribua o investimento ao longo do ano.</p>
+          <div class="plabel">Oferta principal</div>
+          <strong style="display:block;font-family:'Fraunces',serif;font-weight:400;font-size:1.08rem;color:#F5F1E6;margin-bottom:12px">Diagnóstico &amp; Direção Familiar</strong>
+          <div class="pval">R$ 18.000</div>
+          <div class="psub">Casos de maior complexidade: R$ 21.000</div>
+          <p class="pdesc">Para famílias que precisam compreender profundamente o conflito e implementar mudanças com acompanhamento estruturado.</p>
+          <p class="pnote">Situações que ultrapassem o escopo regular ou ampliado recebem uma proposta personalizada.</p>
+          <a class="btn" href="[LINK-WHATSAPP]">Quero iniciar o Diagnóstico &amp; Direção</a>
         </div>
       </div>
     </div>
-    <div class="cta-line"><a class="btn" href="[LINK-WHATSAPP]">Quero começar meu projeto</a></div>
-    <p class="assur">Vagas limitadas pela agenda de atendimento · Início mediante contrato e agendamento da primeira sessão</p>
+    <!-- [CONFIRMAR COM CAROLINA: condições de pagamento — à vista com desconto e/ou parcelamento — pendentes da conversa com Douglas / ferramenta Oferta Irresistível] -->
+    <p class="assur">Vagas limitadas pela agenda de atendimento · Condições de pagamento apresentadas na proposta · Início mediante contrato e agendamento do primeiro encontro</p>
   </div>
 </section>
 
 <section class="terms">
   <div class="wrap tsplit2 reveal">
     <div>
-      <p class="eyebrow">Transparência desde o início</p>
-      <h2>Combinados que protegem o seu processo</h2>
+      <p class="eyebrow">Combinados</p>
+      <h2>Transparência em todas as etapas</h2>
     </div>
     <ul>
-      <li>As sessões acontecem no ritmo de 4 encontros por mês — 12 no total — agendadas em conjunto, respeitando o processo de cada família</li>
-      <li>O canal de WhatsApp é para assistência de continuidade; mensagens são respondidas em até 24–48h úteis</li>
-      <li>Situações que exigem análise aprofundada ou mediação em tempo real são direcionadas para sessões — garantindo que nenhum tema importante seja tratado pela metade</li>
-      <li>O material de feedback é enviado após cada sessão; o Plano de Governança e o Plano de Parentalidade são entregues ao final do terceiro mês</li>
-      <li>Todo o processo é regido por contrato com confidencialidade total</li>
+      <li>Todo o processo é conduzido de forma personalizada, respeitando a realidade de cada família</li>
+      <li>Os encontros são agendados conforme a evolução do caso e complementados por suporte estruturado entre as sessões</li>
+      <li>Quando houver necessidade de acompanhamento jurídico, psicológico, psiquiátrico ou de outra especialidade, a Carolina orientará os encaminhamentos adequados</li>
+      <li>O processo é regido por contrato e confidencialidade</li>
     </ul>
   </div>
 </section>
 
 <section class="final">
   <div class="wrap reveal">
-    <p class="eyebrow">O momento é agora</p>
-    <blockquote>Famílias não precisam de mais tempo para o conflito passar. <b>Precisam de estrutura para atravessá-lo.</b></blockquote>
-    <a class="btn" href="[LINK-WHATSAPP]">Agendar uma consulta</a>
+    <p class="eyebrow">O próximo passo</p>
+    <blockquote>Clareza não elimina a complexidade. <b>Ela permite conduzi-la.</b></blockquote>
+    <p style="max-width:38em;font-size:.92rem;color:rgba(244,240,228,.82);margin:-14px 0 14px;line-height:1.7">Se sua família enfrenta um conflito importante, o primeiro passo não é encontrar todas as respostas. É compreender o que realmente está acontecendo.</p>
+    <p style="max-width:38em;font-size:.92rem;color:rgba(244,240,228,.82);margin:0 0 34px;line-height:1.7">A partir dessa compreensão, torna-se possível construir uma direção consistente para as decisões que precisam ser tomadas.</p>
+    <a class="btn" href="[LINK-WHATSAPP]">Quero encontrar uma direção</a>
   </div>
 </section>
 
 <footer>
   <div class="fname">Carolina Amorim</div>
-  <div class="fproj">Projeto de Reorganização Familiar</div>
+  <div class="fproj">Diagnóstico &amp; Direção Familiar</div>
   <div class="ftags">Era Relações Integradas<br>Governança Familiar</div>
   <div class="fcontact"><b>Contato</b> · [Contato / WhatsApp / Instagram]</div>
 </footer>
